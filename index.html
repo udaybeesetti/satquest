@@ -1,166 +1,91 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Satellite Builder</title>
-    <link rel="stylesheet" media="all" href="css/fonts.css" type="text/css" />
-    <link rel="stylesheet" media="all" href="css/style.css" type="text/css" />
-    <!--[if !IE]> -->
-    <link href="tests/satellite/style-nonie.css" rel="stylesheet" type="text/css" media="screen" />
-    <!-- <![endif]-->
-    <script type="text/javascript" src="js/convertable.js"></script>
-    <script type="text/javascript" src="js/stuquery.js"></script>
-    <script type="text/javascript" src="js/rocketscientist.js"></script>
-    <script type="text/javascript" src="js/rocketscientist.builder.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/parikrama-logo.png"><title>SAT QUEST | Parikrama Satellite Club, NIT Rourkela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/satquest.css">
+<script src="js/config.js"></script>
 </head>
+<body class="sq-home">
+<canvas id="stars"></canvas>
+<div id="sqModal" class="sqmodal" hidden><div class="sqbox2">
+  <div class="sq-eyebrow">MISSION CONTROL</div>
+  <h2>Enter your team name</h2>
+  <p id="sqRules"></p>
+  <input id="sqTeam" maxlength="30" placeholder="Team name" autocomplete="off">
+  <div class="sqerr" id="sqErr"></div>
+  <button class="fancy" id="sqGo">Start the clock</button> <button class="sq-cancel" id="sqX">Cancel</button>
+</div></div>
+<div class="sq-wrap">
+  <div class="sq-top"><span class="sq-brand"><img src="images/parikrama-logo.png" alt="Parikrama logo"><span>PARIKRAMA</span></span><span>INNOVISION <b>2026</b> &middot; NIT ROURKELA</span></div>
 
-<body class="front">
+  <section class="sq-hero">
+    
+    <div class="sq-eyebrow">PARIKRAMA THE SATELLITE CLUB PRESENTS</div>
+    <h1 class="sq-title">SAT QUEST</h1>
+    <p class="sq-tag">Design it. Power it. Launch it. Build a satellite mission from the first idea to orbit.</p>
+    <button class="fancy sq-cta" id="begin">Begin the quest</button>
+    <div class="sq-orbit">
+      <div class="ring r2"></div>
+      <div class="ring" id="ring"><a class="sat" id="sat" href="https://www.instagram.com/parikramaka_nitr/" target="_blank" rel="noopener" aria-label="Parikrama on Instagram">🛰️</a></div>
+      <a class="planet" id="planet" href="https://github.com/himanshupradhann" target="_blank" rel="noopener" aria-label="GitHub"></a>
+    </div>
+    <p class="sq-hint" id="hint">Catch the satellite to find us on Instagram &middot;</p>
+    </section>
 
-    <div id="application">
-        <header>
-            <div id="bar">
-                <div class="barmenu">
-                    <div class="baritem">
-                        <button class="togglebtn togglemenu" title="Menu"><img src="images/cleardot.gif" class="icon menu" alt="" /></button>
-                    </div>
-                </div>
-            </div>
-            <div id="progressbar">
-                <div class="progress-inner"></div>
-            </div>
-        </header>
+  <section class="sq-sec">
+    <h2>MISSION BRIEFING</h2>
+    <div class="sq-grid">
+      <div class="sq-card"><div class="n">01</div><h3>CHOOSE YOUR MISSION</h3><p>Pick a satellite type and purpose: communications, navigation or Earth observation.</p></div>
+      <div class="sq-card"><div class="n">02</div><h3>BUILD THE SATELLITE</h3><p>Select the bus, orbit and instruments while watching cost and mass.</p></div>
+      <div class="sq-card"><div class="n">03</div><h3>POWER THE SYSTEM</h3><p>Size solar panels and batteries so every instrument keeps running.</p></div>
+      <div class="sq-card"><div class="n">04</div><h3>LAUNCH TO ORBIT</h3><p>Engineer a rocket with enough delta-v, then see if your mission succeeds.</p></div>
+    </div>
+  </section>
 
-        <div id="main">
-            <section id="start" class="view">
-                <div class="padded">
-                    <div class="page levels">
-                        <div class="row-top">
-                            <div class="msg noscriptmsg">Oops! The interactive parts of <em>Classroom rocket scientist</em> need Javascript to be enabled. Sorry about that.</div>
-                            <h1>Satellite Builder</h1>
-                            <p>The UK Space Agency is planning its next satellite mission. They've asked you to help design it!</p>
-                            <p>Your role is to design and launch a satellite that can perform a specific role related to communications, navigation or earth observation. You’ll need to select the size of your satellite along with its instruments and
-                                power supply. Once it’s completed, you’ll need to design a rocket capable of launching your satellite into orbit — will you succeed?</p>
-                            <!-- <a href="beginner">Beginner</a> / <a href="intermediate">Intermediate</a> / <a href="advanced">Advanced</a> -->
-                        </div>
-                        <div class="row-main">
-                            <div class="holder beginner">
-                                <div class="image"><img src="images/svg/level-beginner.svg" alt="Beginner" title="Beginner Level" /></div>
-                                <div class="padded">
-                                    <div class="level beginner">
-                                        <h3>Beginner</h3>
-                                        <p>Select a mission, and design a satellite that will achieve the aims. Don't worry about money - just make something that works!</p>
-                                        <button onclick="window.location.href='beginner.html'" class="fancy" data-type="beginner">Select this level</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="holder intermediate">
-                                <div class="image"><img src="images/svg/level-intermediate.svg" alt="Intermediate" title="Intermediate Level" /></div>
-                                <div class="padded">
-                                    <div class="level intermediate">
-                                        <h3>Intermediate</h3>
-                                        <p>Give yourself a bit more flexibility, including being able to select the size of satellite. But watch out - you've got a budget to stick to now!</p>
-                                        <button onclick="window.location.href='intermediate.html'" class="fancy" data-type="intermediate">Select this level</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="holder advanced">
-                                <div class="image"><img src="images/svg/level-advanced.svg" alt="Advanced" title="Advanced Level" /></div>
-                                <div class="padded">
-                                    <div class="level advanced">
-                                        <h3>Advanced</h3>
-                                        <p>The most advanced level, with a much greater range of options, and the ability to select which orbit the satellite will be in. But will your rocket be big enough to launch your satellite?</p>
-                                        <button onclick="window.location.href='advanced.html'" class="fancy" data-type="advanced">Select this level</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="about" class="not-at-start fullpage">
-                <div class="container">
-                    <div class="padded">
-                        <a class="close" title="Close" href="#">&times;</a>
-                        <h2>About:</h2>
-                        <p>Classroom rocket scientist was developed by <a href="http://www.cardiff.ac.uk/people/view/828749-north-chris">Dr Chris North</a>, <a href="http://www.strudel.org.uk/">Dr Stuart Lowe</a>, <a href="https://lco.global/user/seroberts/">Sarah Roberts</a>                            and Brychan Govier.</p>
-                        <p>It was supported by <a href="http://blogs.cardiff.ac.uk/physicsoutreach/">Cardiff University School of Physics and Astronomy</a>.</p>
-                        <p>Icons by parkjisun, Housin Aziz, Creative Stall, Plainicon, Hakan Yalcin, Rflor, Megan Mitchell, Clockwise, Leadway Global LLC, <a href="http://www.flaticon.com">Flaticon</a>, <a href="http://material.io/tools/icons">Google Material Design</a>                            and OCHA Visual Information Unit.</p>
-                        <p>For information or to provide feedback, please contact <a href="mailto:schools@astro.cf.ac.uk">schools@astro.cf.ac.uk</a>.</p>
-                        <div class="icons">
-                            <img src="images/CardiffPhysics_200px.png">
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <section class="sq-sec" id="about">
+    <h2>ABOUT</h2>
+    <div class="sq-about">
+      <p><strong>SAT QUEST</strong> is a satellite mission-design challenge by <strong>Parikrama, the Satellite Club of NIT Rourkela</strong>, made for <strong>Innovision 2026</strong>, the tech fest of the Technical Society, Student Activity Centre.</p>
+      <p>NIT Rourkela's Student Satellite Club. Exploring the cosmos.</p>
+      <p>Parikrama (परिक्रमा) means &ldquo;going around&rdquo;, which is exactly what a satellite does. We are a student community exploring satellites, orbital mechanics and space technology.</p>
+      <p><a href="mailto:parikramakaclubnitr@gmail.com">parikramakaclubnitr@gmail.com</a></p>
+    </div>
+  </section>
 
-            <section id="guide" class="not-at-start fullpage wide">
-                <div class="container">
-                    <div class="padded">
-                        <a class="close" title="Close" href="#">&times;</a>
-                        <h2>Teacher Guide:</h2>
-                        <p>The UK Space Agency is planning its next satellite mission. They've asked you to help design it!</p>
-                        <p>This app challenges students to design and launch a satellite that can perform a specific role related to communication, navigation or earth observation. They’ll need to select the size of their satellite along with its instruments
-                            and power supply. Once completed, they’ll be challenged to design a rocket capable of launching the satellite into orbit.</p>
-                        <p>Older or more capable students may want to use Intermediate and Advanced mode. Intermediate mode challenges students to build their satellite and launcher on a strict budget. Advanced mode provides a much greater range of options
-                            and challenges students to select the correct orbit for their satellite based on its purpose.</p>
-                        <ul>
-                            <li><strong>Keywords:</strong>&nbsp;Science, Space, Astronomy, Satellite, Rocket, Web app, Interactive, Satellite, Technology</li>
-                            <li><strong>Level:</strong>&nbsp;Upper Primary - Lower High School</li>
-                            <li><strong>Duration:</strong>&nbsp;30-60mins</li>
-                        </ul>
-                        <h3>Goals:</h3>
-                        <ul>
-                            <li>Understand the roles played by satellite technology and how it affects our everyday lives.</li>
-                            <li>Understand the components of a satellite mission: size, instruments and orbital path, in addition to constraints such as budget, power and thrust.</li>
-                        </ul>
-                        <h3>Learning objectives:</h3>
-                        <ul>
-                            <li>Learn about three different types of satellites, with examples of their specific uses: Communications, Earth Observation or Navigation.</li>
-                            <li>Build a satellite designed to fulfil a specified purpose Select all components including size, instruments, power source, orbital path, as well as a launch vehicle with adequate size and thrust.</li>
-                            <li>Complete your mission within specific budget constraints.</li>
-                        </ul>
-                        <h3>More info:</h3>
-                        <ul>
-                            <li>Teacher Guide&nbsp;(<a title="Teacher Guide PDF" href="guide/en/satellite-builder-guide.pdf">PDF</a>)</li>
-                            <li>Teacher Presentation&nbsp;(<span><a title="Teacher Presentation PDF" href="guide/en/satellite-builder-slides.pdf">PDF</a>;</span>
-                                <span><a title="Teacher Presentation PowerPoint" href="guide/en/satellite-builder-slides.pptx">PowerPoint</a>;</span>
-                                <span><a title="Teacher Presentation Keynote" href="guide/en/satellite-builder-slides.key">Keynote</a></span>)</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+  <div class="sq-foot">PARIKRAMA SATELLITE CLUB &middot; NIT ROURKELA &middot; INNOVISION 2026</div>
+</div>
+<script>
+(function(){var m=document.getElementById('sqModal'),inp=document.getElementById('sqTeam'),err=document.getElementById('sqErr');
+document.getElementById('sqRules').innerHTML='You have <b>'+((window.SQ&&SQ.TIME_LIMIT_MIN)||20)+' minutes</b> from the moment you press start. Score = budget saved + time left. A failed launch scores 0.';
+function open(){m.hidden=false;inp.value=localStorage.getItem('sq_team')||'';inp.focus()}
+document.getElementById('begin').onclick=open;document.getElementById('sqX').onclick=function(){m.hidden=true};
+if(location.hash==='#start')open();
+function go(){var t=inp.value.trim();if(t.length<2){err.textContent='Please enter a team name.';return}
+localStorage.setItem('sq_team',t);localStorage.setItem('sq_start',Date.now());localStorage.removeItem('sq_done');location.href='advanced.html'}
+document.getElementById('sqGo').onclick=go;inp.onkeydown=function(e){if(e.key==='Enter')go()}})();
+(function(){var ring=document.getElementById('ring'),sat=document.getElementById('sat'),pl=document.getElementById('planet'),h=document.getElementById('hint'),d=h.innerHTML;
+function on(t){return function(){ring.classList.add('paused');h.textContent=t}}function off(){ring.classList.remove('paused');h.innerHTML=d}
+sat.addEventListener('mouseenter',on('Satellite locked. Follow Parikrama on Instagram'));sat.addEventListener('mouseleave',off);
+sat.addEventListener('focus',on('Satellite locked. Follow Parikrama on Instagram'));sat.addEventListener('blur',off);
+pl.addEventListener('mouseenter',function(){h.textContent='Open our GitHub'});pl.addEventListener('mouseleave',function(){h.innerHTML=d})})();
+(function(){var c=document.getElementById('stars'),x=c.getContext('2d'),s=[];
+function r(){c.width=innerWidth;c.height=innerHeight;s=[];for(var i=0;i<160;i++)s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.4+.2,p:Math.random()*6})}
+function d(t){x.clearRect(0,0,c.width,c.height);s.forEach(function(a){x.globalAlpha=.4+.6*Math.abs(Math.sin(t/1200+a.p));x.fillStyle=a.r>1.2?'#ffb77a':'#cfc6ff';x.beginPath();x.arc(a.x,a.y,a.r,0,7);x.fill()});requestAnimationFrame(d)}
+addEventListener('resize',r);r();d(0)})();
+document.addEventListener('keydown', function (event) {
+    if (
+        event.key === 'F12' ||
+        (event.ctrlKey && event.key === 'U') ||
+        (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J'))
+    ) {
+        event.preventDefault();
+    }
+});
 
-            <section id="help" class="not-at-start fullpage">
-                <div class="container"><div class="padded">
-                    <a class="close" title="Close" href="#">&times;</a>
-                    <h2>Help</h2>
-                    <p>Coming soon...</p>
-                </div></div>
-            </section>
-
-            <section id="units" class="not-at-start fullpage">
-                <div class="container"><div class="padded">
-                    <a class="close" title="Close" href="#">&times;</a>
-                    <h2>Change units:</h2>
-                    <form id="optionform"><ul>
-                        <li><label for="changecurrency">Currency units:</label> <select name="changecurrency" id="changecurrency" data-units="currency"><option selected value="credits">Credits</option><option value="GBP">British Pounds £</option><option value="USD">US Dollars $</option><option value="EUR">Euros €</option><option value="JPY">Japanese Yen ¥</option><option value="CAD">Canadian Dollars C$</option><option value="AUD">Australian Dollars $</option><option value="CHF">Swiss Francs Fr.</option><option value="SEK">Swedish Krona kr</option><option value="CNY">Chinese Yuan ¥</option><option value="INR">Indian Rupees ₹</option><option value="RUB">Russian Ruble RUB</option><option value="DBL">Doubloons DBL</option></select></li>
-                        <li><label for="changelength">Length units:</label> <select name="changelength" id="changelength" data-units="length"><option selected value="m">Metres</option><option value="ft">Feet</option><option value="cubit">Cubits</option><option value="bluewhale">Blue Whales</option><option value="yard">Yards</option></select></li>
-                        <li><label for="changemass">Mass units:</label> <select name="changemass" id="changemass" data-units="mass"><option selected value="kg">Kilograms</option><option value="lb">Pounds</option><option value="elephant">Elephants</option></select></li>
-                        <li><label for="changepower">Power units:</label> <select name="changepower" id="changepower" data-units="power"><option selected value="watts">watts</option><option value="horsepower">horsepower</option></select></li>
-                    </ul></form>
-                </div></div>
-            </section>
-        </div>
-        <menu id="menu" class="dropdown not-at-start">
-            <li class="baritem restart" data="restart"><button title="Start over"><img src="images/cleardot.gif" class="icon restart" alt="" /><span>Restart</span></button></li>
-            <li class="baritem guide" data="guide"><button title="Guide"><img src="images/cleardot.gif" class="icon guide" alt="" /><span>Guide</span></button></li>
-            <li class="baritem units" data="units"><button title="Change the units"><img src="images/cleardot.gif" class="icon options" alt="" /><span>Units</span></button></li>
-            <li class="baritem about" data="about"><button title="About"><img src="images/cleardot.gif" class="icon info" alt="" /><span>About</span></button></li>
-            <li class="baritem help" data="help"><button title="Help"><img src="images/cleardot.gif" class="icon help" alt="" /><span>Help</span></button></li>
-            <li class="baritem fullscreen not-at-start" data="fullscreen"><button title="Switch between viewing fullscreen or in a standard browser window"><img alt="" class="icon fullscreen" src="images/cleardot.gif" /><span>Toggle fullscreen</span></button></li>
-        </menu>
-	</div>
+</script>
 </body>
 </html>

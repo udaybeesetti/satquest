@@ -755,11 +755,12 @@ var rs;
         var ltxt = "";
 
         if (ok < this.requirements.length) {
-            ltxt = '<div class="requirements">' + this.data.launch.prep.checklist + '</div>';
-            ltxt = ltxt.replace("$requirementslist$", (requirementslistlaunch ? '<ol class="errors">' + requirementslistlaunch + "</ol>" : ""));
-            ltxt = ltxt.replace("$requirementssectionlist$", (requirementssectionlist ? '<ol class="errors">' + requirementssectionlist + "</ol>" : ""));
+            // SAT QUEST: don't reveal the checklist, just say the mission is not ready
+            ltxt = '<div class="sq-notready"><strong>Not ready to launch</strong><p>Something is wrong with your mission. Go back and check your satellite, power and rocket, then try again.</p></div>';
+            S('#launch h2').html('Not ready to launch');
         } else {
             ltxt = this.data.launch.prep.goforlaunch;
+            S('#launch h2').html('Ready to launch?');
         }
 
         // Update launch text

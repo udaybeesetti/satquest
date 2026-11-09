@@ -3,9 +3,11 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
-	<title>Satellite Builder</title>
+	<link rel="icon" href="images/parikrama-logo.png"><title>SAT QUEST | Parikrama Satellite Club, NIT Rourkela</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap">
 	<link rel="stylesheet" media="all" href="css/fonts.css" type="text/css"/>
 	<link rel="stylesheet" media="all" href="css/style.css"  type="text/css" />
+	<link rel="stylesheet" media="all" href="css/satquest.css" type="text/css" />
 	<!--[if !IE]> --><link href="tests/satellite/style-nonie.css" rel="stylesheet" type="text/css" media="screen" /><!-- <![endif]-->
 	<script type="text/javascript" src="js/convertable.js"></script>
 	<script type="text/javascript" src="js/rocketequation.js"></script>
@@ -18,11 +20,12 @@
 		var lang = "en"
 	</script>
 	<script type="text/javascript" src="js/rocketscientist.js"></script>
+	<script src="js/config.js"></script>
 	<script type="text/javascript" src="js/rocketscientist.builder.js"></script>
 </head>
 <body>
 	<script type="text/javascript">
-		document.body.innerHTML += '<div id="overlay" style=""><div style="display:table-cell;vertical-align:middle;text-align:center;">Loading space programme...</div></div>';
+		document.body.innerHTML += '<div id="overlay" style=""><div style="display:table-cell;vertical-align:middle;text-align:center;">Initialising SAT QUEST mission control...</div></div>';
 	</script>
 
 	<div id="application" class="advanced">
@@ -30,16 +33,13 @@
 		<header>
 			<div id="bar" class="scriptonly">
 				<div class="barmenu">
-					<div class="baritem left padded"><h1><a href="index.html">Satellite Builder</a></h1></div>
+					<div class="baritem left padded"><h1><a href="index.html"><img class="sq-club" src="images/parikrama-logo.png" alt="Parikrama"><span class="sq-logo">SAT<b>QUEST</b></span></a></h1></div>
 					<div class="baritem">
 						<button class="togglebtn togglemenu" title="Menu"><img src="images/cleardot.gif" class="icon menu" alt="" /></button>						
 						<menu id="menu" class="dropdown not-at-start">
 							<li class="baritem restart" data="restart"><button title="Start over"><img src="images/cleardot.gif" class="icon restart" alt="" /><span>Restart</span></button></li>
 							<!--li class="baritem" data="level"><button title="Change the difficulty"><img src="images/cleardot.gif" class="icon difficulty" alt="" /><span>Difficulty</span></button></li-->
-							<li class="baritem guide" data="guide"><button title="Guide"><img src="images/cleardot.gif" class="icon guide" alt="" /><span>Guide</span></button></li>
-							<li class="baritem units" data="units"><button title="Change the units"><img src="images/cleardot.gif" class="icon options" alt="" /><span>Units</span></button></li>
 							<li class="baritem about" data="about"><button title="About"><img src="images/cleardot.gif" class="icon info" alt="" /><span>About</span></button></li>
-							<li class="baritem help" data="help"><button title="Help"><img src="images/cleardot.gif" class="icon help" alt="" /><span>Help</span></button></li>
 							<li class="baritem fullscreen not-at-start" data="fullscreen"><button title="Switch between viewing fullscreen or in a standard browser window"><img alt="" class="icon fullscreen" src="images/cleardot.gif" /><span>Toggle fullscreen</span></button></li>
 						</menu>
 					</div>
@@ -1464,40 +1464,17 @@
     <div class="container">
         <div class="padded">
             <a class="close" title="Close" href="#">&times;</a>
-            <h2>About:</h2>
-            <p>Classroom rocket scientist was developed by <a href="http://www.cardiff.ac.uk/people/view/828749-north-chris">Dr Chris North</a>, <a href="http://www.strudel.org.uk/">Dr Stuart Lowe</a>, <a href="https://lco.global/user/seroberts/">Sarah Roberts</a> and Brychan Govier.</p><p>It was supported by <a href="http://blogs.cardiff.ac.uk/physicsoutreach/">Cardiff University School of Physics and Astronomy</a>.</p><p>Icons by parkjisun, Housin Aziz, Creative Stall, Plainicon, Hakan Yalcin, Rflor, Megan Mitchell, Clockwise, Leadway Global LLC, <a href="http://www.flaticon.com">Flaticon</a>, <a href="http://material.io/tools/icons">Google Material Design</a> and OCHA Visual Information Unit.</p><p>For information or to provide feedback, please contact <a href="mailto:schools@astro.cf.ac.uk">schools@astro.cf.ac.uk</a>.</p>
-            <div class="icons">
-                <img src="images/CardiffPhysics_200px.png">
-            </div>
+            <h2>About SAT QUEST</h2>
+            <p><strong>SAT QUEST</strong> is a satellite mission-design challenge by <strong>Parikrama, the Student Satellite Club of NIT Rourkela</strong>, created for <strong>Innovision 2026</strong>, the annual tech fest organised by the Technical Society, Student Activity Centre, NIT Rourkela.</p>
+            <p>You play mission architect: choose a satellite type and purpose, build the bus, pick an orbit, load instruments, size the power system, and finally engineer a launch vehicle that can actually reach orbit. Every choice trades off cost, mass and power, just like real mission design.</p>
+            <p>Parikrama (परिक्रमा) means &ldquo;going around&rdquo;, which is exactly what a satellite does. We are a student community at NIT Rourkela exploring satellites, orbital mechanics and space technology.</p>
+            <p>Contact: <a href="mailto:parikramakaclubnitr@gmail.com">parikramakaclubnitr@gmail.com</a></p>
+            <p>The builder engine is adapted from the open-source <em>Classroom Rocket Scientist</em> project (Cardiff University).</p>
         </div>
     </div>
 </section>
 
-<section id="guide" class="not-at-start fullpage wide">
-    <div class="container">
-        <div class="padded">
-            <a class="close" title="Close" href="#">&times;</a>
-            <h2>Teacher Guide:</h2>
-            <p>The UK Space Agency is planning its next satellite mission. They've asked you to help design it!</p><p>This app challenges students to design and launch a satellite that can perform a specific role related to communication, navigation or earth observation. They’ll need to select the size of their satellite along with its instruments and power supply. Once completed, they’ll be challenged to design a rocket capable of launching the satellite into orbit.</p><p>Older or more capable students may want to use Intermediate and Advanced mode. Intermediate mode challenges students to build their satellite and launcher on a strict budget. Advanced mode provides a much greater range of options and challenges students to select the correct orbit for their satellite based on its purpose.</p>
-            <ul>
-                <li><strong>Keywords:</strong>&nbsp;Science, Space, Astronomy, Satellite, Rocket, Web app, Interactive, Satellite, Technology</li>
-                <li><strong>Level:</strong>&nbsp;Upper Primary - Lower High School</li>
-                <li><strong>Duration:</strong>&nbsp;30-60mins</li>
-            </ul>
-            <h3>Goals:</h3>
-            <ul><li>Understand the roles played by satellite technology and how it affects our everyday lives.</li><li>Understand the components of a satellite mission: size, instruments and orbital path, in addition to constraints such as budget, power and thrust.</li></ul>
-            <h3>Learning objectives:</h3>
-            <ul><li>Learn about three different types of satellites, with examples of their specific uses: Communications, Earth Observation or Navigation.</li><li>Build a satellite designed to fulfil a specified purpose Select all components including size, instruments, power source, orbital path, as well as a launch vehicle with adequate size and thrust.</li><li>Complete your mission within specific budget constraints.</li></ul>
-            <h3>More info:</h3>
-            <ul>
-                <li>Teacher Guide&nbsp;(<a title="Teacher Guide PDF" href="guide/en/satellite-builder-guide.pdf")">PDF</a>)</li>
-                <li>Teacher Presentation&nbsp;(<span><a title="Teacher Presentation PDF" href="guide/en/satellite-builder-slides.pdf">PDF</a>;</span>
-                <span><a title="Teacher Presentation Powerpoint" href="guide/en/satellite-builder-slides.pptx">Powerpoint</a>;</span>
-                <span><a title="Teacher Presentation Keynote" href="guide/en/satellite-builder-slides.key">Keynote</a></span>)</li>
-            </ul>
-        </div>
-    </div>
-</section>
+
 
 <section id="help" class="not-at-start fullpage">
     <div class="container">
@@ -1512,5 +1489,6 @@
 	</div>
 
 	<style id="customstylesheet"></style>
+<script src="js/satquest-game.js"></script>
 </body>
 </html>

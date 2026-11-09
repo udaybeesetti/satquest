@@ -185,6 +185,7 @@
     }
 
     RocketScientist.prototype.moveToLaunchPad = function() {
+        if (window.satquestFinish) { window.satquestFinish(this, false); return this; } // SAT QUEST
 
         var slots = '';
         for (var s in this.choices.slots) {

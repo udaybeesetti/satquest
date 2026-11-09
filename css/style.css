@@ -1,15 +1,15 @@
 @charset "UTF-8";
 .bg2x2 {
-    background-color: #02a24b;
+    background-color: #14b8a6;
 }
 
 .bg2x4 {
-    background-color: #f04031;
+    background-color: #ff7a59;
 }
 
 .bg3x3,
 .bg4x4 {
-    background-color: #00a2d3;
+    background-color: #8b5cf6;
 }
 
 .bg4x8 {
@@ -189,7 +189,7 @@ body {
     width: 100%;
     line-height: 1.5em;
     overflow-x: hidden;
-    background-color: #202020;
+    background-color: #0b0a1a;
 }
 
 body.nooverflow {
@@ -232,7 +232,7 @@ strong {
 
 a {
     text-decoration: none;
-    color: #00a2d3;
+    color: #8b5cf6;
     font-weight: bold;
 }
 
@@ -275,7 +275,7 @@ ul.files li {
 }
 
 .light {
-    color: #00a2d3;
+    color: #8b5cf6;
     background-color: rgba(255, 255, 255, 0.9) !important;
 }
 
@@ -371,11 +371,11 @@ header {
     line-height: 1.5em;
     padding: 0em;
     background: #000000;
-    background-image: -webkit-linear-gradient(top, #000000, #202020);
-    background-image: -moz-linear-gradient(top, #000000, #202020);
-    background-image: -ms-linear-gradient(top, #000000, #202020);
-    background-image: -o-linear-gradient(top, #000000, #202020);
-    background-image: linear-gradient(to bottom, #000000, #202020);
+    background-image: -webkit-linear-gradient(top, #000000, #0b0a1a);
+    background-image: -moz-linear-gradient(top, #000000, #0b0a1a);
+    background-image: -ms-linear-gradient(top, #000000, #0b0a1a);
+    background-image: -o-linear-gradient(top, #000000, #0b0a1a);
+    background-image: linear-gradient(to bottom, #000000, #0b0a1a);
     background-repeat: repeat-x;
 }
 
@@ -414,12 +414,12 @@ img.icon {
 
 .dropdown {
     box-shadow: 0.1em 0.2em 0.25em rgba(0, 0, 0, 0.3);
-    background: #202020;
-    background-image: -webkit-linear-gradient(top, #202020, #000000);
-    background-image: -moz-linear-gradient(top, #202020, #000000);
-    background-image: -ms-linear-gradient(top, #202020, #000000);
-    background-image: -o-linear-gradient(top, #202020, #000000);
-    background-image: linear-gradient(to bottom, #202020, #000000);
+    background: #0b0a1a;
+    background-image: -webkit-linear-gradient(top, #0b0a1a, #000000);
+    background-image: -moz-linear-gradient(top, #0b0a1a, #000000);
+    background-image: -ms-linear-gradient(top, #0b0a1a, #000000);
+    background-image: -o-linear-gradient(top, #0b0a1a, #000000);
+    background-image: linear-gradient(to bottom, #0b0a1a, #000000);
 }
 
 nav li {
@@ -801,29 +801,29 @@ img.info {
 
 .COMMS .padded,
 .COMMS .holder-inner {
-    background-color: #f9aa8f;
+    background-color: #1b1540;
 }
 
 .COMMS .image {
-    background-color: #f04031;
+    background-color: #ff7a59;
 }
 
 .EO .padded,
 .EO .holder-inner {
-    background-color: #9bd4ae;
+    background-color: #1b1540;
 }
 
 .EO .image {
-    background-color: #02a24b;
+    background-color: #14b8a6;
 }
 
 .NAV .padded,
 .NAV .holder-inner {
-    background-color: #8fd7ed;
+    background-color: #1b1540;
 }
 
 .NAV .image {
-    background-color: #00a2d3;
+    background-color: #8b5cf6;
 }
 
 section {
@@ -1302,27 +1302,27 @@ section .holder-holder {
 }
 
 section#start .beginner .padded {
-    background-color: #f9aa8f;
+    background-color: #1b1540;
 }
 
 section#start .beginner .image {
-    background-color: #f04031;
+    background-color: #ff7a59;
 }
 
 section#start .intermediate .padded {
-    background-color: #9bd4ae;
+    background-color: #1b1540;
 }
 
 section#start .intermediate .image {
-    background-color: #02a24b;
+    background-color: #14b8a6;
 }
 
 section#start .advanced .padded {
-    background-color: #8fd7ed;
+    background-color: #1b1540;
 }
 
 section#start .advanced .image {
-    background-color: #00a2d3;
+    background-color: #8b5cf6;
 }
 
 section#type .image,
@@ -1451,7 +1451,7 @@ section.fullpage.wide .container {
 .requirements li.met:before {
     content: "✔";
     padding-right: 0.25em;
-    color: #02a24b;
+    color: #14b8a6;
 }
 
 .requirements li.notmet {
@@ -1462,7 +1462,7 @@ section.fullpage.wide .container {
 .requirements li.notmet:before {
     content: "✘";
     padding-right: 0.2em;
-    color: #f04031;
+    color: #ff7a59;
 }
 
 .display-area {
@@ -1914,7 +1914,7 @@ button.fancy:focus {
     background-image: -ms-linear-gradient(top, #cccccc, #efefef);
     background-image: -o-linear-gradient(top, #cccccc, #efefef);
     background-image: linear-gradient(to bottom, #cccccc, #efefef);
-    box-shadow: 0 0 5px #00a2d3;
+    box-shadow: 0 0 5px #8b5cf6;
 }
 
 button.selected {
@@ -1972,7 +1972,7 @@ button.selected:focus {
     width: 0%;
     height: 100%;
     padding: 0px;
-    background-color: #00a2d3;
+    background-color: #8b5cf6;
     -webkit-transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
     -ms-transition: all 0.5s linear;
@@ -2292,7 +2292,7 @@ table.data td:last-child {
 
 .orbit-HEO .bg-orbit,
 .list li.selected.orbit-HEO .list-right {
-    background-color: #f04031;
+    background-color: #ff7a59;
 }
 
 .orbit-GEO .bg-orbit,
@@ -2579,7 +2579,7 @@ table.data td:last-child {
 .slot2x4 .face.front,
 .slot2x4 .face.back,
 .slot2x4 .eg {
-    background: #f04031;
+    background: #ff7a59;
 }
 
 .slot2x2 .face.top {
@@ -2594,7 +2594,7 @@ table.data td:last-child {
 .slot2x2 .face.front,
 .slot2x2 .face.back,
 .slot2x2 .eg {
-    background: #02a24b;
+    background: #14b8a6;
 }
 
 .slot4x8 .face.top {
@@ -2676,7 +2676,7 @@ table.data td:last-child {
 }
 
 .antenna .face.left {
-    background: #202020;
+    background: #0b0a1a;
 }
 
 .antenna .face.top {
@@ -3445,9 +3445,9 @@ table.data td:last-child {
     height: 0;
     border-style: solid;
     border-width: 1.5em 0 1.5em 1.5em;
-    border-color: transparent transparent transparent #202020;
+    border-color: transparent transparent transparent #0b0a1a;
     line-height: 0px;
-    _border-color: #000000 #000000 #000000 #202020;
+    _border-color: #000000 #000000 #000000 #0b0a1a;
     _filter: progid:DXImageTransform.Microsoft.Chroma(color="#000000");
     right: 0.75em;
 }
@@ -3459,9 +3459,9 @@ table.data td:last-child {
     height: 0;
     border-style: solid;
     border-width: 1.5em 1.5em 1.5em 0;
-    border-color: transparent #202020 transparent transparent;
+    border-color: transparent #0b0a1a transparent transparent;
     line-height: 0px;
-    _border-color: #000000 #202020 #000000 #000000;
+    _border-color: #000000 #0b0a1a #000000 #000000;
     _filter: progid:DXImageTransform.Microsoft.Chroma(color="#000000");
     left: 0.75em;
 }
@@ -3487,7 +3487,7 @@ table.data td:last-child {
     margin: 0px;
     margin-top: -2px;
     padding: 0px;
-    border-top: 0.3em solid #202020;
+    border-top: 0.3em solid #0b0a1a;
 }
 
 .solar-panels ol li {
@@ -3706,7 +3706,7 @@ table.data td:last-child {
 }
 
 .radar .hemisphere .inner:after {
-    background: #202020;
+    background: #0b0a1a;
 }
 
 .north .inner:after {
@@ -3999,15 +3999,15 @@ table.data td:last-child {
 /* End of Hemisphere CSS */
 
 .satellite.solar-fixed .row:first-child .solar-right .face.top {
-    border-right: 4px solid #00a2d3;
+    border-right: 4px solid #8b5cf6;
 }
 
 .satellite.solar-fixed .solar-top .face.left {
-    border-top: 4px solid #00a2d3;
+    border-top: 4px solid #8b5cf6;
 }
 
 .satellite.solar-fixed .solar-top .face.front {
-    border-top: 4px solid #00a2d3;
+    border-top: 4px solid #8b5cf6;
 }
 
 .satellite .solar-panel,
@@ -4017,7 +4017,7 @@ table.data td:last-child {
 .satellite.solar-fixed .solar-back .face.back,
 .slot4x4,
 .slot3x3 {
-    background-color: #00a2d3;
+    background-color: #8b5cf6;
 }
 
 .satellite.solar-fixed .solar-left .face.left,
@@ -4027,8 +4027,8 @@ table.data td:last-child {
 .satellite .solar-panel,
 .slot4x4,
 .slot3x3 {
-    background-image: -webkit-linear-gradient(#e1f4fe 1px, transparent 1px), -webkit-linear-gradient(0deg, #e1f4fe 1px, transparent 1px), -webkit-linear-gradient(#48c7e9 1px, transparent 1px), -webkit-linear-gradient(0deg, #48c7e9 1px, transparent 1px);
-    background-image: linear-gradient(#e1f4fe 1px, transparent 1px), linear-gradient(90deg, #e1f4fe 1px, transparent 1px), linear-gradient(#48c7e9 1px, transparent 1px), linear-gradient(90deg, #48c7e9 1px, transparent 1px);
+    background-image: -webkit-linear-gradient(#e1f4fe 1px, transparent 1px), -webkit-linear-gradient(0deg, #e1f4fe 1px, transparent 1px), -webkit-linear-gradient(#5eead4 1px, transparent 1px), -webkit-linear-gradient(0deg, #5eead4 1px, transparent 1px);
+    background-image: linear-gradient(#e1f4fe 1px, transparent 1px), linear-gradient(90deg, #e1f4fe 1px, transparent 1px), linear-gradient(#5eead4 1px, transparent 1px), linear-gradient(90deg, #5eead4 1px, transparent 1px);
     background-size: 1.5em 1.5em, 1.5em 1.5em, 0.375em 0.375em, 0.375em 0.375em;
     background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
     box-sizing: border-box;
@@ -4036,11 +4036,11 @@ table.data td:last-child {
 
 .satellite.solar-fixed .solar-left .face.front,
 .satellite.solar-fixed .row:first-child .solar-left .face.top {
-    border-left: 4px solid #00a2d3;
+    border-left: 4px solid #8b5cf6;
 }
 
 .satellite.solar-fixed .solar-right .face.front {
-    border-right: 4px solid #00a2d3;
+    border-right: 4px solid #8b5cf6;
 }
 
 .threeD .satellite.solar-fixed .solar-left .face.front,
@@ -4058,16 +4058,16 @@ table.data td:last-child {
 }
 
 .bg2x2 {
-    background-color: #02a24b;
+    background-color: #14b8a6;
 }
 
 .bg2x4 {
-    background-color: #f04031;
+    background-color: #ff7a59;
 }
 
 .bg3x3,
 .bg4x4 {
-    background-color: #00a2d3;
+    background-color: #8b5cf6;
 }
 
 .bg4x8 {
@@ -4153,9 +4153,9 @@ ul.orrery li.orbit span:before {
     width: 0.75em;
     height: 0.25em;
     display: block;
-    background-color: #00a2d3;
-    background-image: -webkit-linear-gradient(#e1f4fe 1px, transparent 1px), -webkit-linear-gradient(0deg, #e1f4fe 1px, transparent 1px), -webkit-linear-gradient(#48c7e9 1px, transparent 1px), -webkit-linear-gradient(0deg, #48c7e9 1px, transparent 1px);
-    background-image: linear-gradient(#e1f4fe 1px, transparent 1px), linear-gradient(90deg, #e1f4fe 1px, transparent 1px), linear-gradient(#48c7e9 1px, transparent 1px), linear-gradient(90deg, #48c7e9 1px, transparent 1px);
+    background-color: #8b5cf6;
+    background-image: -webkit-linear-gradient(#e1f4fe 1px, transparent 1px), -webkit-linear-gradient(0deg, #e1f4fe 1px, transparent 1px), -webkit-linear-gradient(#5eead4 1px, transparent 1px), -webkit-linear-gradient(0deg, #5eead4 1px, transparent 1px);
+    background-image: linear-gradient(#e1f4fe 1px, transparent 1px), linear-gradient(90deg, #e1f4fe 1px, transparent 1px), linear-gradient(#5eead4 1px, transparent 1px), linear-gradient(90deg, #5eead4 1px, transparent 1px);
     background-size: 1.5em 1.5em, 1.5em 1.5em, 0.375em 0.375em, 0.375em 0.375em;
     background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
     box-sizing: border-box;
@@ -4167,7 +4167,7 @@ ul.orrery li.body {
     margin-left: -1em;
     margin-top: -1em;
     border: none;
-    background: #02a24b;
+    background: #14b8a6;
     background-image: url("../images/png/earth-northern.png");
     background-size: 100% 100%;
     z-index: 100;
@@ -4203,7 +4203,7 @@ ul.orrery li.HEO {
     height: 9.4em;
     margin-top: -4.7em;
     margin-left: -6.58em;
-    border-color: #f04031;
+    border-color: #ff7a59;
 }
 
 ul.orrery li.HEO span {
@@ -4330,16 +4330,16 @@ ul.orrery li.GEO {
 }
 
 .bg2x2 {
-    background-color: #02a24b;
+    background-color: #14b8a6;
 }
 
 .bg2x4 {
-    background-color: #f04031;
+    background-color: #ff7a59;
 }
 
 .bg3x3,
 .bg4x4 {
-    background-color: #00a2d3;
+    background-color: #8b5cf6;
 }
 
 .bg4x8 {

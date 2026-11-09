@@ -1,0 +1,8 @@
+window.SQ = {
+
+  SHEET_URL: '',
+  ORGANISER_PIN: '2026',
+  TIME_LIMIT_MIN: 20,
+  BUDGET_POINTS: 60,
+  TIME_POINTS: 40
+};
